@@ -1,1 +1,78 @@
 @charset "UTF-8";
+@font-face{
+    font-family: 'epilogue-medium';
+    src: url("fonts/Epilogue-Medium.ttf");
+}
+@font-face{
+    font-family: 'epilogue-bold';
+    src: url("fonts/Epilogue-Bold.ttf");
+}
+:root{
+    --almost-white: rgb(250, 250, 250);
+    --medium-gray: rgb(105, 105, 105);
+    --almost-black: rgb(20, 20, 20);
+}
+body{
+    font-family: 'epilogue-medium';
+    max-width: 1440px;
+    margin: 0px auto;
+}
+header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px;
+    height: 70px;
+}
+nav{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 510px;
+}
+.nav-list{
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+}
+.nav-list a{
+    text-decoration: none;
+    color: var(--medium-gray);
+    transition: color 0.2s;
+}
+.nav-list a:hover{
+    color: var(--almost-black);
+}
+.login_and_register{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 2rem;
+}
+.login-btn{
+    text-decoration: none;
+    color: var(--medium-gray);
+    transition: color 0.2s;
+}
+.login-btn:hover{
+    color: var(--almost-black);
+}
+.register-btn{
+    text-decoration: none;
+    color: var(--medium-gray);
+    padding: 10px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 14px;
+    box-shadow: 0px 2px 1px var(--medium-gray);
+    transition: all 0.2s;
+}
+.register-btn:hover{
+    color: var(--almost-black);
+    border: 1px solid var(--almost-black);
+    box-shadow: 0px 2px 1px var(--almost-black);
+}
