@@ -1,12 +1,6 @@
 @charset "UTF-8";
-@font-face{
-    font-family: 'epilogue-medium';
-    src: url("fonts/Epilogue-Medium.ttf");
-}
-@font-face{
-    font-family: 'epilogue-bold';
-    src: url("fonts/Epilogue-Bold.ttf");
-}
+@font-face{font-family: 'epilogue-medium';src: url("fonts/Epilogue-Medium.ttf");}
+@font-face{font-family: 'epilogue-bold';src: url("fonts/Epilogue-Bold.ttf");}
 :root{
     --almost-white: rgb(250, 250, 250);
     --medium-gray: rgb(105, 105, 105);
@@ -46,9 +40,7 @@ header{
     color: var(--medium-gray);
     transition: color 0.3s;
 }
-.nav-list a:hover{
-    color: var(--almost-black);
-}
+.nav-list a:hover{color: var(--almost-black);}
 .login_and_register{
     display: flex;
     align-items: center;
@@ -87,12 +79,8 @@ main{
     max-width: 1132px;
     margin: auto;
 }
-#content{
-    width: 500px;
-}
-#content h1{
-    font-size: 4rem;
-}
+#content{width: 500px;}
+#content h1{font-size: 4rem;color: var(--almost-black);}
 #content p {
     max-width: 500px;
     font-size: 1.1rem;
@@ -121,19 +109,19 @@ main{
     align-items: flex-end;
     height: 187px;
 }
-.footer-content > img{
-    height: 25px;
-    display: block;
-}
-.image-main img{
-    height: 600px;
-}
+.footer-content > img{height: 25px;display: block;}
+.image-main img{height: 600px;}
 .attribution{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     padding-top: 130px;
+}
+.attribution p{margin: 0px;}
+.attribution a{
+    text-decoration: none;
 }
 @media (max-width: 970px) {
     main{flex-direction: column-reverse; padding-top: 50px;}
@@ -143,26 +131,83 @@ main{
         padding-top: 30px;
     }
     #content p{margin: auto; padding-bottom: 4rem;}
-    .image-main img, .image-main{
-        height: auto;
-        text-align: center;
-    }
-    .footer-content{
-        justify-content: center;
-        gap: 34px;
-    }
+    .image-main img, .image-main{height: auto;text-align: center;}
+    .footer-content{justify-content: center;gap: 34px;}
 }
 @media (max-width: 830px) {
     .image-main img{width: 100%;}
     #desktop-menu{width: 100px;}
     .nav-list, .login_and_register{display: none;}
+    #mobile-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        position: absolute;
+        top: 0px;
+        right: 0vw;
+        width: 50vw;
+        height: 100%;
+        background-color: var(--almost-white);
+    }
+    .nav-list-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 2rem;
+        list-style: none;
+        padding: 20px 0px 0px 25px;
+    }
+    .nav-list-mobile a{
+        text-decoration: none;
+        color: var(--medium-gray);
+        transition: color 0.1s;
+    }
+    .nav-list-mobile a:hover{color: var(--medium-gray);}
+    .nav-list-mobile a:active{color: var(--almost-black);}
+    .dropdown-menu-mobile{
+        list-style: none;
+        padding: 10px 0px 0px 30px;
+    }
+    .login_and_register-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        position: relative;
+        top: 120px;
+    }
+    .login-btn:hover{color: var(--medium-gray);}
+    .login-btn:active{color: var(--almost-black);background-color: rgba(0, 0, 0, .1);}
+    .login-btn{
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0px;
+        transition: all 0.1s;
+    }
+    .register-btn:hover{
+        color: var(--medium-gray);
+        border: 1px solid var(--medium-gray);
+        box-shadow: 0px 2px 1px var(--medium-gray);
+    }
+    .register-btn:active{
+        color: var(--almost-black);
+        border: 1px solid var(--almost-black);
+        box-shadow: 0px 2px 1px var(--almost-black);
+    }
+    .register-btn{
+        display: block;
+        width: 80%;
+        text-align: center;
+        transition: all 0.1s;
+    }
 }
 @media (max-width: 530px) {
-    .footer-content{
-        gap: 0px;
-        justify-content: space-between;
-    }
-    .footer-content img{
-        height: 20px;
-    }
+    .footer-content{gap: 30px;justify-content: center;}
+    .footer-content img{height: 15px;}
+}
+@media (max-width: 425px) {
+    #content h1{font-size: 3rem;}
+    #mobile-menu{width: 62vw;}
+    .register-btn{width: 65%;}
 }
