@@ -13,29 +13,48 @@
     <nav id="desktop-menu">
       <img src="images/logo.svg"/>
       <ul class="nav-list">
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Company</a></li>
+        <li class="item-dropdown-li" onmouseenter="drop_menu_desktop('features')">
+          <span class="span-li">Features <img class="seta" src="images/icon-arrow-down.svg"/></span>
+          <ul class="dropdown-menu-desktop" onmouseleave="close_dropdown_desktop('features')">
+            <li><a href="#"><img src="images/icon-todo.svg"/> Todo List</a></li>
+            <li><a href="#"><img src="images/icon-calendar.svg"/> alendar</a></li>
+            <li><a href="#"><img src="images/icon-reminders.svg"/> Reminders</a></li>
+            <li><a href="#"><img src="images/icon-planning.svg"/> Planning</a></li>
+          </ul>
+        </li>
+        <li class="item-dropdown-li" onmouseenter="drop_menu_desktop('company')">
+          <span class="span-li">Company <img class="seta" src="images/icon-arrow-down.svg"/></span>
+          <ul class="dropdown-menu-desktop" onmouseleave="close_dropdown_desktop('company')">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
         <li><a href="#">Careers</a></li>
         <li><a href="#">About</a></li>
       </ul>
+      <img id="menu-mobile-open" src="images/icon-menu.svg" onclick="mobile_menu('open')"/>
     </nav>
     <div class="login_and_register">
       <a class="login-btn" href="#">Login</a>
       <a class="register-btn" href="#">Register</a>
     </div>
     <nav id="mobile-menu">
+      <div id="menu-mobile-close">
+        <img src="images/icon-close-menu.svg" onclick="mobile_menu('close')"/>
+      </div>
       <ul class="nav-list-mobile">
         <li>
-          <a href="#">Features</a>
+          <span class="item-dropdown" onclick="drop_menu_mobile('features')">Features <img class="seta" src="images/icon-arrow-down.svg"/></span>
           <ul class="dropdown-menu-mobile">
-            <li><a href="#"><img src="images/icon-todo.svg"/>Todo List</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Reminders</a></li>
-            <li><a href="#">Planning</a></li>
+            <li><a href="#"><img src="images/icon-todo.svg"/> Todo List</a></li>
+            <li><a href="#"><img src="images/icon-calendar.svg"/> alendar</a></li>
+            <li><a href="#"><img src="images/icon-reminders.svg"/> Reminders</a></li>
+            <li><a href="#"><img src="images/icon-planning.svg"/> Planning</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">Company</a>
+          <span class="item-dropdown" onclick="drop_menu_mobile('company')" href="#">Company <img class="seta" src="images/icon-arrow-down.svg"/></span>
           <ul class="dropdown-menu-mobile">
             <li><a href="#">History</a></li>
             <li><a href="#">Our Team</a></li>
@@ -56,7 +75,7 @@
         <h1>Make<br/>
           remote work</h1>
         <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-        <a href="#">Learn more</a>
+        <a>Learn more</a>
       <footer class="footer-content">
         <img src="images/client-databiz.svg"/>
         <img src="images/client-audiophile.svg"/>
