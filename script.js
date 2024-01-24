@@ -12,3 +12,14 @@ for(let i = 0; i < dropdownMenu.length; i++){
         }
     });
 }
+const Mobile_menu = document.querySelector("#mobile-menu");
+const Open_close_menu = document.querySelectorAll(".open-close-menu");
+for(let o = 0; o < Open_close_menu.length;o++){
+    Open_close_menu[o].addEventListener('click', function(){
+        if(Mobile_menu.style.display == 'flex'){
+            Mobile_menu.style.display = 'none';
+        }else{
+            Mobile_menu.style.display = 'flex';
+        }
+    });
+}
