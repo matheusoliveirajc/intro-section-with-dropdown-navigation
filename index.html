@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
   <link rel="stylesheet" href="style.css"/>
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <title>Intro section with dropdown navigation</title>
+  <link rel="icon" href="images/icon-dev.png" type="icon/png"/>
 </head>
 <body>
-  <header class="main-header">
+  <header id="main-header">
       <img class="logo" src="images/logo.svg"/>
-    <nav id="desktop-menu">
+    <nav class="desktop-menu">
       <ul class="nav-list">
         <li class="dropdown-menu">
-          <span class="span-li">Features <img class="seta" src="images/icon-arrow-down.svg"/></span>
+          <span class="open-dropdown">Features <img class="arrow" src="images/icon-arrow-down.svg"/></span>
           <ul class="features-menu-list dropdown-list">
             <li><a href="#"><img src="images/icon-todo.svg"/>Todo List</a></li>
             <li><a href="#"><img src="images/icon-calendar.svg"/>Calendar</a></li>
@@ -22,7 +22,7 @@
           </ul>
         </li>
         <li class="dropdown-menu">
-          <span class="span-li">Company <img class="seta" src="images/icon-arrow-down.svg"/></span>
+          <span class="open-dropdown">Company <img class="arrow" src="images/icon-arrow-down.svg"/></span>
           <ul class="company-menu-list dropdown-list">
             <li><a href="#">History</a></li>
             <li><a href="#">Our Team</a></li>
@@ -32,50 +32,50 @@
         <li><a href="#">Careers</a></li>
         <li><a href="#">About</a></li>
       </ul>
-      <div class="login_and_register">
-        <a class="login-btn" href="#">Login</a>
-        <a class="register-btn" href="#">Register</a>
-      </div>
-    </nav>    
-    <img id="open-menu-icon" class="open-close-menu" src="images/icon-menu.svg"/>
-    <nav id="mobile-menu">
-      <div id="menu-mobile-close">
-        <img class="open-close-menu" src="images/icon-close-menu.svg"/>
-      </div>
-      <ul class="nav-list">
-        <li class="dropdown-menu">
-          <span class="span-li">Features <img class="seta" src="images/icon-arrow-down.svg"/></span>
-          <ul class="features-menu-list dropdown-list">
-            <li><a href="#"><img src="images/icon-todo.svg"/> Todo List</a></li>
-            <li><a href="#"><img src="images/icon-calendar.svg"/> alendar</a></li>
-            <li><a href="#"><img src="images/icon-reminders.svg"/> Reminders</a></li>
-            <li><a href="#"><img src="images/icon-planning.svg"/> Planning</a></li>
-          </ul>
-        </li>
-        <li class="dropdown-menu">
-          <span class="span-li">Company <img class="seta" src="images/icon-arrow-down.svg"/></span>
-          <ul class="company-menu-list dropdown-list">
-            <li><a href="#">History</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-      <div class="login_and_register">
+      <div class="login-and-register">
         <a class="login-btn" href="#">Login</a>
         <a class="register-btn" href="#">Register</a>
       </div>
     </nav>
+    <nav class="mobile-menu">
+      <div class="close-menu-icon">
+        <img src="images/icon-close-menu.svg"/>
+      </div>
+      <ul class="nav-list">
+        <li class="dropdown-menu">
+          <span class="open-dropdown">Features <img class="arrow" src="images/icon-arrow-down.svg"/></span>
+          <ul class="features-menu-list dropdown-list">
+            <li><a href="#"><img src="images/icon-todo.svg"/>Todo List</a></li>
+            <li><a href="#"><img src="images/icon-calendar.svg"/>Calendar</a></li>
+            <li><a href="#"><img src="images/icon-reminders.svg"/>Reminders</a></li>
+            <li><a href="#"><img src="images/icon-planning.svg"/>Planning</a></li>
+          </ul>
+        </li>
+        <li class="dropdown-menu">
+          <span class="open-dropdown">Company <img class="arrow" src="images/icon-arrow-down.svg"/></span>
+          <ul class="company-menu-list dropdown-list">
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <div class="login-and-register">
+        <a class="login-btn" href="#">Login</a>
+        <a class="register-btn" href="#">Register</a>
+      </div>
+    </nav>    
+    <img class="open-menu-icon" src="images/icon-menu.svg"/>
   </header>
   <main>
     <section id="content">
       <h1>Make<br/>
         remote work</h1>
         <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-        <a href="#" class="learn-more-link">Learn more</a>
-        <div class="client-list">
+        <a href="#" class="learn-more-btn">Learn more</a>
+        <div class="sponsors-list">
           <img src="images/client-databiz.svg"/>
           <img src="images/client-audiophile.svg"/>
           <img src="images/client-meet.svg"/>
@@ -83,14 +83,14 @@
         </div>
       </section>
       <picture class="image-main">
-        <source media="(max-width: 1120px)" srcset="images/image-hero-mobile.png" type="image/png"/>
+        <source media="(max-width: 980px)" srcset="images/image-hero-mobile.png" type="image/png"/>
         <img src="images/image-hero-desktop.png"/>
       </picture>
     </main>
     <footer class="attribution">
-      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
-      <p>Coded by <a href="https://github.com/matheusoliveirajc" target="_blank">Matheus de Oliveira</a>.</p>
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="frontendmentor-link">Frontend Mentor</a>.</p> 
+      <p>Coded by <a href="https://github.com/matheusoliveirajc" target="_blank" class="dev-link">Matheus de Oliveira</a>.</p>
     </footer>
-  </body>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+  </body><!--media="(max-width: 1120px)"-->
   </html>
