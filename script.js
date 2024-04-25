@@ -40,7 +40,7 @@ function changeMenu(){
         let isClickIcon = openIcon.contains(event.target);
         if(!isClickMenu && !isClickIcon){
             menuClosed();
-            document.body.classList.toggle('block-scrollY');
+            document.body.classList.remove('block-scrollY');
             mobileMenu.classList.remove('open-mobile-menu');
         }
     });
