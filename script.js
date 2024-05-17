@@ -19,7 +19,6 @@ dropdownCaption.forEach((caption, index) =>{
         }
     });
 });
-
 const openIcon = document.querySelector('.open-menu-icon');
 const closeIcon = document.querySelector('.close-menu-icon > img');
 function openMenu(){
@@ -42,6 +41,5 @@ function closeMenu(event){
         document.body.classList.remove('block-scrollY');
     }
 }
-
 openIcon.addEventListener('click', openMenu);
 document.addEventListener('click', closeMenu);
